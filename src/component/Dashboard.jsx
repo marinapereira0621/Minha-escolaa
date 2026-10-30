@@ -1,0 +1,67 @@
+import { useState } from 'react'
+import reactLogo from '../assets'
+import viteLogo from '../../public/vite.svg'
+import './Dashboard.css'
+import Cabecalho from '../component/cabecalho'
+import MenuLateral from '../component/MenuLateral'
+import Botao from '../component/Botao'
+import CampoTexto from '../component/CampoTexto'
+import CartaoIndicador from '../component/Cartaoindicador'
+function App() {
+  const [count, setCount] = useState(0)
+  return (
+    <>
+      <div>
+        <Cabecalho />
+        <div className='layout'>
+        <MenuLateral />
+        <main className="conteudo">
+          <h2>Dashboard</h2>
+          <p>Bem-vindo ao sistema!</p>
+          <div className="indicadores">
+             <CartaoIndicador
+              titulo="Total de alunos"
+              valor="120"
+              />
+              <CartaoIndicador
+              titulo="Total de professores"
+              valor="15"
+              />
+              <CartaoIndicador
+               titulo="Avaliações realizadas"
+                valor="85"
+                />  
+          </div>
+          <Botao>Entrar</Botao>
+          <Botao>Novo aluno</Botao>
+          <Botao>Cadastrar professores</Botao>
+        </main>
+       </div>
+       <CampoTexto
+       label="Cadastre seu E-mail para receber nossas novidades"
+       tipo="email"
+       />
+        <a href="https://vite.dev" target="_blank">
+          <img src={viteLogo} className="logo" alt="Vite logo" />
+        </a>
+        <a href="https://react.dev" target="_blank">
+          <img src={reactLogo} className="logo react" alt="React logo" />
+        </a>
+      </div>
+      <h1>Vite + React</h1>
+      <div className="card">
+        <button onClick={() => setCount((count) => count + 1)}>
+          count is {count}
+        </button>
+        <p>
+          Edit <code>src/App.jsx</code> and save to test HMR
+        </p>
+      </div>
+      <p className="read-the-docs">
+        Click on the Vite and React logos to learn more
+      </p>
+    </>
+  )
+}
+
+export default App

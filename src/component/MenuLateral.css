@@ -1,0 +1,25 @@
+.menu-lateral {
+  width: 220px;
+  min-height: 300px;
+  background-color: #cadaf2;
+  padding: 20px;
+}
+.menu-lateral h2 {
+  color: #1e3a5f;
+  font-size: 20px;
+}
+.menu-lateral ul {
+  list-style: none;
+  padding: 0;
+}
+.menu-lateral li {
+  margin-bottom: 15px;
+}
+.menu-lateral a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+}
+.menu-lateral a:hover {
+  color: #1e3a5f;
+}
