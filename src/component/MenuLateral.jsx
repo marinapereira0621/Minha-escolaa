@@ -2,7 +2,19 @@
 import './MenuLateral.css'
 import { useNavigate } from 'react-router-dom'
 function MenuLateral() {
-  const navegar = useNavigate()
+  const navigate = useNavigate()
+  function sair() {
+    navigate('/')
+  }
+  function PaginaDashboard() {
+    navigate('/')
+  }
+  function PaginaAluno() {
+    navigate('/alunos')
+  }
+  function PaginaProfessor() {
+    navigate('/professores')
+  }
   return (
     <aside className="menu-lateral">
       <h2>Menu</h2>
@@ -10,7 +22,7 @@ function MenuLateral() {
         <li>
           <a href="#" onClick={(e) => {
             e.preventDefault()
-            navegar('/')
+            PaginaDashboard()
           }}>
             Dashboard
           </a>
@@ -18,7 +30,7 @@ function MenuLateral() {
         <li>
           <a href="#" onClick={(e) => {
             e.preventDefault()
-            navegar('/alunos')
+            PaginaAluno()
           }}>
             Alunos
           </a>
@@ -26,13 +38,16 @@ function MenuLateral() {
         <li>
           <a href="#" onClick={(e) => {
             e.preventDefault()
-            navegar('/professores')
+            PaginaProfessor()
           }}>
             Professores
           </a>
         </li>
       </ul>
+
+      <button onClick={sair}>Sair</button>
     </aside>
   )
 }
+
 export default MenuLateral
