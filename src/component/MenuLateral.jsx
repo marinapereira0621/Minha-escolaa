@@ -49,5 +49,4 @@ function MenuLateral() {
     </aside>
   )
 }
-
 export default MenuLateral
